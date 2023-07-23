@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Tarea } from '../intefaz/tareainterfaz';
 
 @Component({
@@ -6,12 +6,11 @@ import { Tarea } from '../intefaz/tareainterfaz';
   templateUrl: './lista-de-tareas.component.html',
   styleUrls: ['./lista-de-tareas.component.css']
 })
-export class ListaDeTareasComponent {
+export class ListaDeTareasComponent implements OnInit {
   tarea: Tarea[] = [];
   nuevaTarea: string = '';
   tareaPendientes: Tarea[] = [];
   tareaCompletadas: Tarea[] = [];
-  errorAgregarTarea: boolean = false;
 
   ngOnInit() {
     this.cargarLocalStorage();
@@ -25,13 +24,11 @@ export class ListaDeTareasComponent {
       this.guardarLocalStorage();
       this.actualizarListasTareas();
       this.nuevaTarea = '';
-      this.errorAgregarTarea = false;
-    } else {
-      this.errorAgregarTarea = true;
     }
   }
 
   cambioTarea(task: Tarea) {
+    task.completed = !task.completed;
     this.guardarLocalStorage();
     this.actualizarListasTareas();
   }

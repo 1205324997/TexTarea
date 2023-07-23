@@ -1,9 +1,113 @@
+h1{
+  color: rgb(20, 139, 189);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .completed-task {
-    text-decoration: line-through;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 10px;
-  }
-  
+  text-decoration: line-through;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.containerTareas {
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  margin: 10px;
+  margin-top: 5%;
+  height: 35px;
+  width: 42%;
+  margin-left: -5px;
+}
+
+button {
+  background-color: rgb(20, 139, 189);
+  color: white;
+  height: 33px;
+  width: 90px;
+  border-color: transparent;
+  border-radius: 7px;
+}
+
+.containerTareas ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.containerTareas ul li .task-container {
+  background-color: rgba(173, 177, 177, 0.356);
+  width: 50%; 
+  margin: 0 auto; 
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;  
+  padding: 5px; 
+  flex-direction: row; 
+}
+
+.containerTareas ul li .task-container input[type="checkbox"] {
+  height: 20px;
+  width: 80px;
+  margin-top: 8px; 
+}
+
+.containerTareas ul li .task-container button {
+  height: 25px;
+  width: 70px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.containerTareas ul li .task-container span {
+  word-wrap: break-word; 
+  overflow: hidden; 
+  max-width: 70%; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerTareas p {
+  border: 1px solid black;
+  padding: 5px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.task0{
+  border: 1px solid black;
+  padding: 5px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.listaTask{
+  margin-top: 10%;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
