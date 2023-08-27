@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: rgb(53, 150, 139);
+    background: -webkit-linear-gradient(left, rgb(53, 150, 139), rgb(53, 150, 139));
+    background: -moz-linear-gradient(left, rgb(53, 150, 139),rgb(200, 252, 246));
+    background: -o-linear-gradient(left, rgb(53, 150, 139), rgb(53, 150, 139));
+    background: linear-gradient(to right, rgb(161, 222, 215), rgb(53, 150, 139));
+}
+

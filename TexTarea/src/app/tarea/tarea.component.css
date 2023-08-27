@@ -1,0 +1,10 @@
+.container{
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+button{
+   background-color:rgb(83, 176, 238);
+    padding: auto;
+}

@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaDeTareasComponent } from './lista-de-tareas/lista-de-tareas.component';
 import { CommonModule } from '@angular/common';
+import { TareaComponent } from './tarea/tarea.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaDeTareasComponent
+    TareaComponent,
   ],
   imports: [
     BrowserModule,
