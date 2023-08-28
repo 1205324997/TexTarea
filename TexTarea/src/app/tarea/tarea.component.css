@@ -2,9 +2,42 @@
     background-color: white;
     margin: 5px;
     padding: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+   }
+
+li{
+margin: 10px;
 }
+
 button{
-   background-color:rgb(83, 176, 238);
+   background-color:rgb(163, 208, 239);
     padding: auto;
+    border-radius: 5px;
+    margin: 0px;
+    }
+
+    .enlaceEliminar{
+        background: none;
+        border-color: transparent;
+        margin: 0%;
+    }
+
+    input{
+        margin: 5px;
+    }
+
+.tachado{
+    text-decoration: line-through;
+}
+
+.tareasRealizadas{
+    margin: 10px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0%;
 }

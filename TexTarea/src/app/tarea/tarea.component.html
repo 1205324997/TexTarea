@@ -1,47 +1,27 @@
 <div class="container">
-    <div class="row">
-        <div class="clo-sm-8">
-            <h1 class="tex-Center">{{title}}</h1>
-        </div>
-        <div class="clo-sm-4">
-            <div class=" alert alert-success alert-dismissable">
-                <a href="#" class="close">
-                    &times;
-                </a>
-                mensaje aqui
-            </div>
-        </div>
-    </div>
-    <div class="clo-sm-8">
-        <h2>Crear Datos:</h2>
-        <form class="form-horizontal">
-            <div class="form-group">
-                <label for="name" class="control-label col-sm-2">
-                    Name
-                </label>
-                <div class="clo-sm-10">
-                    <input type="text" class="form-control" id="name" name="position" [(ngModel)]="model.position" placeholder="Agregar nueva tarea">
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <button type="button" class="btn btn-success" (click)="addTareas()">Guardar</button>
-        </div>
-    </div>
-    <div class="row col-sm-8">
-        <h2>Listado de tareas</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                <th>Tareas</th>
-            </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
+<h1>Lista de Tareas</h1>
+<label for="tarea"> Nombre de la tarea:</label>
+<input type="text" placeholder="ingresar tarea" [(ngModel)]="nombreTarea" id="tarea">
+<button [disabled]="!nombreTarea" (click)="guardarTareas()">Guardar</button>
 
-        </table>
-    </div>
+<ul>
+    <li *ngFor="let tarea of tareas; let i = index" [class.tachado]="tarea.terminada">
+        <input type="checkbox" [(ngModel)]="tarea.terminada" (change)="cambiarEstadodeTarea()">
+        {{tarea.nombre}}
+        <button (click)="eliminarTarea(i)" class="enlaceEliminar"><strong>&times;</strong></button> 
+        <button (click)="editarTareas(i)">Editar</button> 
+        <ng-container *ngIf="i === tareaEditando" >
+        <input [(ngModel)]="tareas[tareaEditando].nombre" (blur)="guardarEdicion()">
+        <button type="button" (click)="guardarEdicion()">Guardar</button>
+        <button type="button" (click)="cancelarEdicion()">Cancelar</button>
+    </ng-container>
+    </li>
+</ul>
+<div class="tareasRealizadas">
+    <strong>Tareas pendientes:</strong> {{tareaPendiente}}
+    <br><br>
+    <strong>Tareas realizadas:</strong> {{tareaRealizada}}
+
+</div>
+
 </div>
